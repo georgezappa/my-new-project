@@ -1,0 +1,115 @@
+/* 🛑 STOP!
+  Do not change this file directly.
+  Modify colors in src/js/color-tokens.js
+ */
+
+$color-primary: rebeccapurple !default;
+$color-on-primary: #CEB3E9 !default;
+$color-secondary: rgb(95, 165, 26) !default;
+$color-on-secondary: rgb(17, 52, 0) !default;
+$color-tertiary: hsl(245, 70%, 30%) !default;
+$color-on-tertiary: hsl(245, 45%, 68.6%) !default;
+$color-surface: #f9f9f9 !default;
+$color-on-surface: #494848 !default;
+$color-Mangrove: #7d7c6a !default;
+$color-on-Mangrove: #10100C !default;
+$color-Edamame: #a3a48a !default;
+$color-on-Edamame: #3A3A2C !default;
+$color-ShallowSea: #93b7be !default;
+$color-on-ShallowSea: #32474B !default;
+$color-MistyMorning: #a7c7bf !default;
+$color-on-MistyMorning: #40534E !default;
+$color-Treasury: #d6d38a !default;
+$color-on-Treasury: #5D5B2F !default;
+$color-Hippy: #eae371 !default;
+$color-on-Hippy: #696520 !default;
+$color-UnderwaterMoonlight: #54879f !default;
+$color-on-UnderwaterMoonlight: #081A23 !default;
+$color-HighSeas: #79a6d8 !default;
+$color-on-HighSeas: #223B57 !default;
+$color-PurpleIllusion: #b2aae8 !default;
+$color-on-PurpleIllusion: #443E6D !default;
+$color-VioletHeaven: #d1b4f3 !default;
+$color-on-VioletHeaven: #5D427D !default;
+$color-NeonBoneyard: #dec6f8 !default;
+$color-on-NeonBoneyard: #694D86 !default;
+$color-FoggyLove: #e7dafc !default;
+$color-on-FoggyLove: #6D5A8B !default;
+$color-gray-warm-1: #fcfcfb !default;
+$color-on-gray-warm-1: #747473 !default;
+
+$base-color-tokens: ("primary", "secondary", "tertiary", "surface", "Mangrove", "Edamame", "ShallowSea", "MistyMorning", "Treasury", "Hippy", "UnderwaterMoonlight", "HighSeas", "PurpleIllusion", "VioletHeaven", "NeonBoneyard", "FoggyLove", "gray-warm-1");
+
+$color-tokens: (
+  "color-primary": $color-primary,
+  "color-on-primary": $color-on-primary,
+  "color-secondary": $color-secondary,
+  "color-on-secondary": $color-on-secondary,
+  "color-tertiary": $color-tertiary,
+  "color-on-tertiary": $color-on-tertiary,
+  "color-surface": $color-surface,
+  "color-on-surface": $color-on-surface,
+  "color-Mangrove": $color-Mangrove,
+  "color-on-Mangrove": $color-on-Mangrove,
+  "color-Edamame": $color-Edamame,
+  "color-on-Edamame": $color-on-Edamame,
+  "color-ShallowSea": $color-ShallowSea,
+  "color-on-ShallowSea": $color-on-ShallowSea,
+  "color-MistyMorning": $color-MistyMorning,
+  "color-on-MistyMorning": $color-on-MistyMorning,
+  "color-Treasury": $color-Treasury,
+  "color-on-Treasury": $color-on-Treasury,
+  "color-Hippy": $color-Hippy,
+  "color-on-Hippy": $color-on-Hippy,
+  "color-UnderwaterMoonlight": $color-UnderwaterMoonlight,
+  "color-on-UnderwaterMoonlight": $color-on-UnderwaterMoonlight,
+  "color-HighSeas": $color-HighSeas,
+  "color-on-HighSeas": $color-on-HighSeas,
+  "color-PurpleIllusion": $color-PurpleIllusion,
+  "color-on-PurpleIllusion": $color-on-PurpleIllusion,
+  "color-VioletHeaven": $color-VioletHeaven,
+  "color-on-VioletHeaven": $color-on-VioletHeaven,
+  "color-NeonBoneyard": $color-NeonBoneyard,
+  "color-on-NeonBoneyard": $color-on-NeonBoneyard,
+  "color-FoggyLove": $color-FoggyLove,
+  "color-on-FoggyLove": $color-on-FoggyLove,
+  "color-gray-warm-1": $color-gray-warm-1,
+  "color-on-gray-warm-1": $color-on-gray-warm-1
+) !default;
+
+@mixin color-tokens() {
+  --color-primary: #{$color-primary};
+  --color-on-primary: #{$color-on-primary};
+  --color-secondary: #{$color-secondary};
+  --color-on-secondary: #{$color-on-secondary};
+  --color-tertiary: #{$color-tertiary};
+  --color-on-tertiary: #{$color-on-tertiary};
+  --color-surface: #{$color-surface};
+  --color-on-surface: #{$color-on-surface};
+  --color-Mangrove: #{$color-Mangrove};
+  --color-on-Mangrove: #{$color-on-Mangrove};
+  --color-Edamame: #{$color-Edamame};
+  --color-on-Edamame: #{$color-on-Edamame};
+  --color-ShallowSea: #{$color-ShallowSea};
+  --color-on-ShallowSea: #{$color-on-ShallowSea};
+  --color-MistyMorning: #{$color-MistyMorning};
+  --color-on-MistyMorning: #{$color-on-MistyMorning};
+  --color-Treasury: #{$color-Treasury};
+  --color-on-Treasury: #{$color-on-Treasury};
+  --color-Hippy: #{$color-Hippy};
+  --color-on-Hippy: #{$color-on-Hippy};
+  --color-UnderwaterMoonlight: #{$color-UnderwaterMoonlight};
+  --color-on-UnderwaterMoonlight: #{$color-on-UnderwaterMoonlight};
+  --color-HighSeas: #{$color-HighSeas};
+  --color-on-HighSeas: #{$color-on-HighSeas};
+  --color-PurpleIllusion: #{$color-PurpleIllusion};
+  --color-on-PurpleIllusion: #{$color-on-PurpleIllusion};
+  --color-VioletHeaven: #{$color-VioletHeaven};
+  --color-on-VioletHeaven: #{$color-on-VioletHeaven};
+  --color-NeonBoneyard: #{$color-NeonBoneyard};
+  --color-on-NeonBoneyard: #{$color-on-NeonBoneyard};
+  --color-FoggyLove: #{$color-FoggyLove};
+  --color-on-FoggyLove: #{$color-on-FoggyLove};
+  --color-gray-warm-1: #{$color-gray-warm-1};
+  --color-on-gray-warm-1: #{$color-on-gray-warm-1};
+}

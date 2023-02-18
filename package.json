@@ -1,0 +1,36 @@
+{
+  "devDependencies": {
+    "a11y-color-tokens": "^0.6.0",
+    "browser-sync": "^2.27.11",
+    "copyfiles": "^2.4.1",
+    "jest": "^29.4.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^4.1.2",
+    "server": "^1.0.38"
+  },
+  "name": "my-new-project",
+  "version": "1.0.0",
+  "description": "My attempt to create a web site from scratch",
+  "main": "index.js",
+  "author": "georgezappa <georgezappa@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "color-tokens": "a11y-color-tokens --outputDirPath='src/sass' --colorTokensPath='src/js/color-tokens.js'",
+    "start": "npm-run-all clean copy:* color-tokens build:sass serve -s watch",
+    "build": "npm-run-all clean copy:* color-tokens build:sass",
+    "clean": "rimraf ./public",
+    "copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
+    "copy:js": "copyfiles -u 1 ./src/js/*.js public",
+    "dev": "npm-run-all clean copy:* color-tokens build:sass serve -ns ",
+    "build:sass": "sass src/sass:public/css",
+    "build:prod-sass": "sass -s compressed --no-source-map src/sass:public/css",
+    "serve": "browser-sync start --no-notify -s test --ss public -f public",
+    "watch": "onchange src -- run-p build"
+  },
+  "browserslist": [
+    ">= 0.5%",
+    "last 2 major versions",
+    "not dead",
+    "not ie > 0"
+  ]
+}

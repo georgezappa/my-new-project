@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/* 🛑 STOP!
+  Do not change this file directly.
+  Modify colors in src/js/color-tokens.js
+ */
+:root {
+  --color-primary: rebeccapurple;
+  --color-on-primary: #CEB3E9;
+  --color-secondary: rgb(95, 165, 26);
+  --color-on-secondary: rgb(17, 52, 0);
+  --color-tertiary: hsl(245deg, 70%, 30%);
+  --color-on-tertiary: hsl(245deg, 45%, 68.6%);
+  --color-surface: #f9f9f9;
+  --color-on-surface: #494848;
+  --color-Mangrove: #7d7c6a;
+  --color-on-Mangrove: #10100C;
+  --color-Edamame: #a3a48a;
+  --color-on-Edamame: #3A3A2C;
+  --color-ShallowSea: #93b7be;
+  --color-on-ShallowSea: #32474B;
+  --color-MistyMorning: #a7c7bf;
+  --color-on-MistyMorning: #40534E;
+  --color-Treasury: #d6d38a;
+  --color-on-Treasury: #5D5B2F;
+  --color-Hippy: #eae371;
+  --color-on-Hippy: #696520;
+  --color-UnderwaterMoonlight: #54879f;
+  --color-on-UnderwaterMoonlight: #081A23;
+  --color-HighSeas: #79a6d8;
+  --color-on-HighSeas: #223B57;
+  --color-PurpleIllusion: #b2aae8;
+  --color-on-PurpleIllusion: #443E6D;
+  --color-VioletHeaven: #d1b4f3;
+  --color-on-VioletHeaven: #5D427D;
+  --color-NeonBoneyard: #dec6f8;
+  --color-on-NeonBoneyard: #694D86;
+  --color-FoggyLove: #e7dafc;
+  --color-on-FoggyLove: #6D5A8B;
+  --color-gray-warm-1: #fcfcfb;
+  --color-on-gray-warm-1: #747473;
+}
+
+body {
+  background-color: var(--color-FoggyLove);
+  color: var(--color-on-FoggyLove);
+}
+
+.theme-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.theme-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+}
+
+.theme-tertiary {
+  background-color: var(--color-tertiary);
+  color: var(--color-on-tertiary);
+}
+
+.theme-surface {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.theme-Mangrove {
+  background-color: var(--color-Mangrove);
+  color: var(--color-on-Mangrove);
+}
+
+.theme-Edamame {
+  background-color: var(--color-Edamame);
+  color: var(--color-on-Edamame);
+}
+
+.theme-ShallowSea {
+  background-color: var(--color-ShallowSea);
+  color: var(--color-on-ShallowSea);
+}
+
+.theme-MistyMorning {
+  background-color: var(--color-MistyMorning);
+  color: var(--color-on-MistyMorning);
+}
+
+.theme-Treasury {
+  background-color: var(--color-Treasury);
+  color: var(--color-on-Treasury);
+}
+
+.theme-Hippy {
+  background-color: var(--color-Hippy);
+  color: var(--color-on-Hippy);
+}
+
+.theme-UnderwaterMoonlight {
+  background-color: var(--color-UnderwaterMoonlight);
+  color: var(--color-on-UnderwaterMoonlight);
+}
+
+.theme-HighSeas {
+  background-color: var(--color-HighSeas);
+  color: var(--color-on-HighSeas);
+}
+
+.theme-PurpleIllusion {
+  background-color: var(--color-PurpleIllusion);
+  color: var(--color-on-PurpleIllusion);
+}
+
+.theme-VioletHeaven {
+  background-color: var(--color-VioletHeaven);
+  color: var(--color-on-VioletHeaven);
+}
+
+.theme-NeonBoneyard {
+  background-color: var(--color-NeonBoneyard);
+  color: var(--color-on-NeonBoneyard);
+}
+
+.theme-FoggyLove {
+  background-color: var(--color-FoggyLove);
+  color: var(--color-on-FoggyLove);
+}
+
+.theme-gray-warm-1 {
+  background-color: var(--color-gray-warm-1);
+  color: var(--color-on-gray-warm-1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Baloo 2", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+header,
+footer {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+main {
+  padding: 0.3rem;
+  max-width: 80ch;
+  color: var(--color-primary);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=style.css.map */
