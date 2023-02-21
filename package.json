@@ -1,12 +1,13 @@
 {
   "devDependencies": {
     "a11y-color-tokens": "^0.6.0",
-    "browser-sync": "^2.27.11",
     "copyfiles": "^2.4.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
     "jest": "^29.4.2",
+    "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^4.1.2",
-    "server": "^1.0.38"
+    "rimraf": "^4.1.2"
   },
   "name": "my-new-project",
   "version": "1.0.0",
@@ -16,19 +17,25 @@
   "license": "MIT",
   "scripts": {
     "color-tokens": "a11y-color-tokens --outputDirPath='src/sass' --colorTokensPath='src/js/color-tokens.js'",
-    "start": "npm-run-all clean copy:* color-tokens build:sass serve -s watch",
-    "build": "npm-run-all clean copy:* color-tokens build:sass",
+    "start": "npm-run-all clean copy:* color-tokens build:sass serve -ns watch",
+    "build": "npm-run-all clean copy:* color-tokens build:sass -s",
     "clean": "rimraf ./public",
     "copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
-    "copy:js": "copyfiles -u 1 ./src/js/*.js public",
-    "dev": "npm-run-all clean copy:* color-tokens build:sass serve -ns ",
+    "copy:css": "copyfiles -u 1 ./src/sass/*.css public",
+    "copy:images": "copyfiles -u 1 ./src/images/*.svg ./src/images/*.png ./src/images/*.jpg public",
+    "copy:js": "copyfiles -u 1 ./src/js/*.js ./src/*.js public",
+    "copy:ejs": "copyfiles -u 1 ./src/views/*.ejs ./src/views/**/*.ejs public",
+    "copy:fonts": "copyfiles -u 1 ./src/fonts/*.ttf public",
+    "dev": "npm-run-all clean copy:* color-tokens build:sass serve -ns watch",
+    "dev:debug": "npm-run-all clean copy:* color-tokens build:sass serve:debug -ns watch",
     "build:sass": "sass src/sass:public/css",
     "build:prod-sass": "sass -s compressed --no-source-map src/sass:public/css",
-    "serve": "browser-sync start --no-notify -s test --ss public -f public",
-    "watch": "onchange src -- run-p build"
+    "serve": "node public/app.js",
+    "serve:debug": "DEBUG=express:* node public/app.js",
+    "watch": "onchange src -- run-p dev"
   },
   "browserslist": [
-    ">= 0.5%",
+    ">= 0.2%",
     "last 2 major versions",
     "not dead",
     "not ie > 0"

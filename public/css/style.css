@@ -40,6 +40,29 @@
   --color-on-gray-warm-1: #747473;
 }
 
+/* Include the font awesome CSS  */
+.fa-bars::before {
+  content: "\f0c9";
+}
+
+.fa-navicon::before {
+  content: "\f0c9";
+}
+
+.fas,
+.fa-solid {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+}
+
+/* End Include the font awesome CSS  */
 body {
   background-color: var(--color-FoggyLove);
   color: var(--color-on-FoggyLove);
@@ -135,8 +158,12 @@ body {
 }
 
 body {
-  font-family: "Baloo 2", sans-serif;
+  font-size: 1rem;
+  font-family: "DynaPuff", sans-serif;
+  line-height: 1.5;
   min-height: 100vh;
+  margin: 0 2rem;
+  color: #333;
   display: flex;
   flex-direction: column;
 }
@@ -150,7 +177,7 @@ footer {
   display: grid;
   place-items: center;
   background-color: var(--color-primary);
-  color: var(--color-surface);
+  color: var(--color-UnderwaterMoonlight);
 }
 
 main {
@@ -168,5 +195,427 @@ p {
   font-size: 1.1rem;
   line-height: 1.5;
 }
+
+/* -- start fluid typography -- */
+h4,
+.h4 {
+  font-size: 1.333rem;
+  line-height: calc(2px + 2ex + 2px);
+  margin-bottom: 0.65em;
+  font-size: clamp(1rem, 4.333vw + 1rem, 1.333rem);
+}
+
+h3,
+.h3 {
+  font-size: 1.776889rem;
+  line-height: calc(2px + 2ex + 2px);
+  margin-bottom: 0.65em;
+  font-size: clamp(1.19051563rem, 4.58637337vw + 1rem, 1.776889rem);
+}
+
+h2,
+.h2 {
+  font-size: 2.368593037rem;
+  line-height: calc(2px + 2ex + 2px);
+  margin-bottom: 0.65em;
+  font-size: clamp(1.5869573348rem, 4.7816357022vw + 1rem, 2.368593037rem);
+}
+
+h1,
+.h1 {
+  font-size: 3.1573345183rem;
+  line-height: calc(2px + 2ex + 2px);
+  margin-bottom: 0.65em;
+  font-size: clamp(2.1154141273rem, 5.041920391vw + 1rem, 3.1573345183rem);
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  margin-top: 0;
+}
+
+/* -- end typography -- */
+/* -- start nav menu -- */
+nav {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: 0 15px;
+}
+
+a {
+  color: var(--color-surface);
+  text-decoration: none;
+}
+
+.menu,
+.submenu {
+  list-style-type: none;
+}
+
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+}
+
+.item {
+  padding: 10px;
+}
+
+.item.button {
+  padding: 9px 5px;
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: var(--color-surface);
+}
+
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+}
+
+.menu li.subitem a {
+  padding: 15px;
+}
+
+.toggle {
+  order: 1;
+  font-size: 20px;
+}
+
+.item.button {
+  order: 2;
+}
+
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.active .item {
+  display: block;
+}
+
+.button.secondary {
+  /* divider between buttons and menu links */
+  border-bottom: 1px var(--color-on-secondary);
+}
+
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+
+.submenu-active .submenu {
+  display: block;
+}
+
+.has-submenu i {
+  font-size: 12px;
+}
+
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f078";
+  color: var(--color-surface);
+  padding-left: 5px;
+}
+
+.subitem a {
+  padding: 10px 15px;
+}
+
+.submenu-active {
+  background-color: var(--color-primary);
+  border-radius: 3px;
+}
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+  .menu {
+    justify-content: center;
+  }
+  .logo {
+    flex: 1;
+  }
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+  .toggle {
+    flex: 1;
+    text-align: right;
+    order: 2;
+  }
+  /* Button up from tablet screen */
+  .menu li.button a {
+    padding: 10px 15px;
+    margin: 5px 0;
+  }
+  .button a {
+    backgound-color: var(--color-PurpleIllusion);
+    border: 1px var(--color-on-PurpleIllusion);
+  }
+  .button.secondary {
+    border: 0;
+  }
+  .button.secondary a {
+    background: transparent;
+    border: 1px #0080ff solid;
+  }
+  .button a:hover {
+    text-decoration: none;
+  }
+  .button:not(.secondary) a:hover {
+    backgound-color: var(--color-PurpleIllusion);
+    border: 1px var(--color-on-PurpleIllusion);
+  }
+}
+/* Desktop menu */
+@media all and (min-width: 960px) {
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+  }
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  .button {
+    order: 2;
+  }
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: var(--color-primary);
+  }
+  .toggle {
+    display: none;
+  }
+  .submenu-active {
+    border-radius: 0;
+  }
+}
+/*-- end nav menu -- */
+/* begin form validation */
+.form-validation {
+  box-sizing: border-box;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 55px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  font: bold 14px sans-serif;
+  text-align: center;
+}
+
+.form-row {
+  position: relative;
+  text-align: left;
+  margin-bottom: 23px;
+}
+
+.form-title-row {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.form-validation h1 {
+  display: inline-block;
+  box-sizing: border-box;
+  color: #4c565e;
+  font-size: 24px;
+  padding: 15px 8px;
+  border-bottom: 2px solid #6caee0;
+  margin: 0;
+}
+
+.form-validation .form-row > label span {
+  display: inline-block;
+  box-sizing: border-box;
+  color: #5f5f5f;
+  width: 180px;
+  text-align: right;
+  padding: 8px 25px;
+}
+
+/* Styles for Valid input data */
+.form-validation .form-valid-data-sign {
+  position: absolute;
+  color: #ffffff;
+  line-height: 24px;
+  text-align: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #a2cf78;
+  left: 440px;
+  top: 10px;
+  display: none;
+}
+
+/* Styles for Invalid input data */
+.form-validation .form-invalid-data {
+  margin-bottom: 55px;
+}
+
+.form-validation .form-invalid-data input {
+  border: 1px solid #d37171;
+  box-shadow: 2px 3px 4px 0 rgba(200, 77, 77, 0.15);
+}
+
+.form-validation .form-invalid-data-sign {
+  position: absolute;
+  display: none;
+  color: #ffffff;
+  line-height: 23px;
+  font-size: 14px;
+  text-align: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #e17c4f;
+  left: 440px;
+  top: 10px;
+}
+
+.form-validation .form-invalid-data-info {
+  display: none;
+  position: absolute;
+  color: #c84d4d;
+  font-weight: normal;
+  bottom: -30px;
+  left: 183px;
+}
+
+.form-invalid-data .form-invalid-data-sign,
+.form-invalid-data .form-invalid-data-info {
+  display: block;
+}
+
+.form-valid-data .form-valid-data-sign {
+  display: block;
+}
+
+.form-validation select {
+  background-color: #ffffff;
+  color: #5f5f5f;
+  box-sizing: border-box;
+  max-width: 240px;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 12px 18px;
+  border: 1px solid #dbdbdb;
+}
+
+.form-validation .form-checkbox input {
+  width: auto;
+}
+
+.form-validation button {
+  display: block;
+  border-radius: 2px;
+  background-color: #6caee0;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 14px 22px;
+  border: 0;
+  margin: 40px 183px 0;
+}
+
+/* Placeholder color */
+.form-validation ::-webkit-input-placeholder {
+  color: #999;
+}
+
+.form-validation ::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.form-validation :-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+/*	Making the form responsive. Remove this media query
+    if you don't need the form to work on mobile devices. */
+@media (max-width: 700px) {
+  .form-validation {
+    margin-top: 0;
+    padding: 30px;
+    max-width: 480px;
+  }
+  .form-validation .form-row {
+    max-width: 300px;
+    margin: 25px auto;
+    text-align: left;
+  }
+  .form-validation .form-title-row {
+    margin-bottom: 50px;
+  }
+  .form-validation h1 {
+    padding: 0 0 15px 0;
+  }
+  .form-validation .form-row > label span {
+    display: block;
+    text-align: left;
+    padding: 0 0 15px;
+  }
+  .form-validation input,
+  .form-validation select {
+    width: 220px;
+  }
+  .form-validation .form-valid-data-sign,
+  .form-validation .form-invalid-data-sign {
+    left: 235px;
+    top: 40px;
+  }
+  .form-validation .form-invalid-data {
+    margin-bottom: 55px;
+  }
+  .form-validation .form-invalid-data-info {
+    left: 0;
+  }
+  .form-validation .form-checkbox span {
+    display: inline-block !important;
+    width: 100px !important;
+  }
+  .form-validation button {
+    margin: 0;
+  }
+}
+/* end form validation */
 
 /*# sourceMappingURL=style.css.map */

@@ -10,7 +10,9 @@ module.exports = [
      * `color` - Required
      * Any valid CSS color value
      */
-    color: 'rebeccapurple'
+    color: 'rebeccapurple',
+    ratioKey: 'small'
+
     /*
      * `onColor` - Optional
      * enum: undefined | "[css color value]" | false
@@ -30,6 +32,7 @@ module.exports = [
      * Corresponds to mimimum contrast for either normal text ("small" = 4.5)
      * or large text/user interface components ("large" = 3)
      */
+
   },
   {
     name: 'secondary',

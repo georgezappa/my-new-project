@@ -1,0 +1,87 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main>
+                <!-- You only need this form and the form-validation.css -->
+
+                <form class="form-validation" method="post" action="#">
+
+                    <div class="form-title-row">
+                        <h1>Form Validation</h1>
+                    </div>
+
+                    <div class="form-row form-input-name-row">
+
+                        <label>
+                            <span>Full name</span>
+                            <input type="text" name="name">
+                        </label>
+
+                        <!--
+                    Add these three elements to every form row. They will be shown by the
+                    .form-valid-data and .form-invalid-data classes (see the JS for an example).
+                -->
+
+                        <span class="form-valid-data-sign"><i
+                                class="fa fa-check"></i></span>
+
+                        <span class="form-invalid-data-sign"><i
+                                class="fa fa-close"></i></span>
+                        <span class="form-invalid-data-info"></span>
+
+                    </div>
+
+                    <div class="form-row form-input-email-row">
+
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email"
+                                value="email@example.com">
+                        </label>
+
+                        <span class="form-valid-data-sign"><i
+                                class="fa fa-check"></i></span>
+
+                        <span class="form-invalid-data-sign"><i
+                                class="fa fa-close"></i></span>
+                        <span class="form-invalid-data-info"></span>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <label>
+                            <span>Dropdown</span>
+                            <select name="dropdown">
+                                <option>Choose an option</option>
+                                <option>Option One</option>
+                                <option>Option Two</option>
+                                <option>Option Three</option>
+                                <option>Option Four</option>
+                            </select>
+                        </label>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <label class="form-checkbox">
+                            <span>Checkbox</span>
+                            <input type="checkbox" name="checkbox" checked>
+                        </label>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <button type="submit">Submit Form</button>
+
+                    </div>
+
+                </form>
+
+                <script src="./js/form-validation.js">
+                </script>
+                <%- include('../partials/footer') %>
