@@ -1,5 +1,6 @@
 var express = require('express')
 var app = express()
+var PORT = 8088
 
 // set the view engine to ejs
 app.set('view engine', 'ejs')
@@ -35,5 +36,5 @@ app.get('/contact', function (req, res) {
   res.render('./pages/contact')
 })
 
-app.listen(8080)
-console.log('Server is listening on port 8080')
+app.listen(POST)
+console.log('Server is listening on port $PORT')
